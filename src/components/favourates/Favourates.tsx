@@ -36,7 +36,7 @@ const Favourates = () => {
           <h3 className="favourate__h3">You most liked tunes...</h3>
 
           <div className="songCard__div">
-            {favourate.map((cur, id) => (
+            {favourate?.map((cur, id) => (
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
