@@ -38,7 +38,7 @@ const Search = () => {
   const onChageHandler = (event: String) => {
     // @ts-ignore
     let matches = [];
-    if (event.length > 0) {
+    if (event?.length > 0) {
       setNoSearchData(false);
       matches = songs.filter((song) => {
         // @ts-ignore

@@ -48,12 +48,11 @@ const PlayList = () => {
   };
 
   useEffect(() => {
-    if (playList.length == 0) {
+    if (playList?.length == 0) {
       return;
     } else {
       localStorage.setItem("playlist", JSON.stringify(playList));
     }
-    console.log(playList.length);
   }, [playList]);
   useEffect(() => {
     const data = localStorage.getItem("playlist");

@@ -27,7 +27,7 @@ const Home = () => {
 
   // setting the data into the localStorage
   useEffect(() => {
-    if (favorite.length == 0) return;
+    if (favorite?.length == 0) return;
     else {
       localStorage.setItem("favourate", JSON.stringify(favorite));
     }
@@ -153,7 +153,7 @@ const Home = () => {
               )}
             </div>
           </div>
-          {favorite.length >= 0 && (
+          {favorite?.length >= 0 && (
             <div className="playlist__div">
               <h5 className="favorate__div__subheading">
                 You favourates tunes.
