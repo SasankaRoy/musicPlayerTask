@@ -19,17 +19,18 @@ const Home = () => {
     // @ts-ignore
     setShowOptions(id + 1);
   };
-
   const setFavoriteLocal = (cur: any) => {
     // @ts-ignore
     setFavorite([...favorite, cur]);
   };
+  //  saving the data into the local storage
 
-  // setting the data into the localStorage
   useEffect(() => {
-    if (favorite?.length == 0) return;
-    else {
+    if (favorite?.length == 0) {
+      return;
+    } else {
       localStorage.setItem("favourate", JSON.stringify(favorite));
+      console.log(favorite);
     }
   }, [favorite]);
 

@@ -166,7 +166,7 @@ const PlayList = () => {
         <div className="playliBox__div">
           <h3 className="playlist__h3"> Your Playlist.</h3>
           <div className="songCard__div">
-            {playList.map((cur, id) => (
+            {playList?.map((cur, id) => (
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
